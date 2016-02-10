@@ -1,8 +1,6 @@
 # angular-unit-tests
 My first meeting with `karma` and `jasmine`
 
----
-
 ## dependencies
 ```js
 npm install express
