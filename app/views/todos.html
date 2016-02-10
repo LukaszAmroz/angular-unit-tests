@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+	<hr>
+<table class="table table-condensed">
+	<thead>
+		<tr>
+			<th>Task</th>
+			<th>&nbsp</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="todo in todos">
+			<td>
+				<input type="checkbox" ng-model="isSelected">
+				<span class="todo-{{isSelected}}">{{todo.text}}</span>
+			</td>
+			<td><button class="btn btn-xs btn-danger" ng-show="isSelected" ng-click="remove(todo)"><span class="glyphicon glyphicon-remove"></span></button></td>
+		</tr>
+	</tbody>
+</table>
+	
+	<p ng-if="removeMessage">{{removeMessage}}</p>
+
+<form id="main-form">
+	<input type="text"class="form-control" ng-model="todo.text" placeholder="Add new task...">
+	<button class="btn btn-sm btn-success btn-block" ng-click="add()">Add</button>
+</form>
